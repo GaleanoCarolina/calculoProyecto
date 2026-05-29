@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULA+ | Domina los límites al infinito y derivadas básicas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CALCULA<span class="highlight">+</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="contenido.html">Contenido</a></li>
+                <li><a href="contenido.html#tutoriales">Tutoriales</a></li>
+                <li><a href="contenido.html#recursos">Recursos</a></li>
+                <li><a href="contenido.html#faq">FAQ</a></li>
+            </ul>
+            <a href="practica.html" class="btn btn-primary nav-btn">Practicar ahora</a>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="hero fade-in">
+            <div class="hero-content">
+                <span class="badge">Proyecto educativo de Cálculo I</span>
+                <h1 class="hero-title">Domina los <span class="text-purple">límites</span> y las <span class="text-green">derivadas</span> de forma visual</h1>
+                <p class="hero-description">Aprende procedimientos paso a paso, resuelve ejercicios, consulta fórmulas y practica con actividades interactivas diseñadas para comprender Cálculo I.</p>
+                <div class="hero-buttons">
+                    <a href="contenido.html" class="btn btn-primary">Comenzar a aprender</a>
+                    <a href="practica.html" class="btn btn-secondary">Practicar ahora</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in">
+                <div class="visual-card floating">
+                    <div class="math-expr">lim <sub>x→∞</sub> f(x) = L</div>
+                </div>
+                <div class="visual-card floating delay-1">
+                    <div class="math-expr">f'(x) = pendiente</div>
+                </div>
+                <div class="big-infinity">∞</div>
+                <div class="graph-illustration">
+                    <svg viewBox="0 0 200 150" width="100%" height="100%">
+                        <path d="M 20 130 L 20 20 M 20 130 L 180 130" stroke="#E7E8F0" stroke-width="3" fill="none"/>
+                        <path d="M 20 120 Q 80 120, 100 70 T 180 30" stroke="#6527F4" stroke-width="5" fill="none"/>
+                        <line x1="20" y1="30" x2="180" y2="30" stroke="#B6F13B" stroke-width="3" stroke-dasharray="6,6"/>
+                    </svg>
+                </div>
+                <div class="small-badge">
+                    <span class="dot"></span> Aprendizaje interactivo
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <section class="stats-band fade-in">
+        <div class="stat-item"><h3>2</h3><p>Temas principales</p></div>
+        <div class="stat-item"><h3>10</h3><p>Tutoriales preparados</p></div>
+        <div class="stat-item"><h3>17</h3><p>Preguntas frecuentes</p></div>
+        <div class="stat-item"><h3>10+</h3><p>Ejercicios interactivos</p></div>
+        <div class="stat-item"><h3>4</h3><p>Recursos descargables</p></div>
+    </section>
+
+    <section class="features section-padding fade-in">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Todo lo que necesitas para avanzar en Cálculo I</h2>
+                <p>Contenido organizado para comprender conceptos, procedimientos y aplicaciones.</p>
+            </div>
+            <div class="grid-4">
+                <div class="feature-card">
+                    <div class="feature-icon">∞</div>
+                    <h3>Límites al infinito</h3>
+                    <p>Comprende qué ocurre con una función cuando x crece positiva o negativamente sin límite.</p>
+                    <a href="contenido.html#limites" class="btn-link">Explorar tema →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Asíntotas</h3>
+                    <p>Identifica asíntotas verticales y horizontales mediante ejemplos gráficos.</p>
+                    <a href="contenido.html#limites" class="btn-link">Explorar tema →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">f'(x)</div>
+                    <h3>Derivadas básicas</h3>
+                    <p>Aprende a calcular pendientes y tasas de cambio utilizando reglas esenciales.</p>
+                    <a href="contenido.html#derivadas" class="btn-link">Explorar tema →</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>Práctica interactiva</h3>
+                    <p>Selecciona respuestas y recibe retroalimentación inmediata.</p>
+                    <a href="practica.html" class="btn-link">Explorar tema →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tutorials-preview section-padding bg-light fade-in">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Tutoriales creados para aprender paso a paso</h2>
+                <p>El proyecto contempla diez videos explicativos donde se resolverán ejercicios de límites al infinito y derivadas básicas.</p>
+            </div>
+            <div class="grid-3">
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="play-btn">▶</div>
+                        <span class="video-badge">Próximamente</span>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-category">Límites al infinito</span>
+                        <h4>Límite racional con grados iguales</h4>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="play-btn">▶</div>
+                        <span class="video-badge">Próximamente</span>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-category">Límites al infinito</span>
+                        <h4>Límites con raíces y racionalización</h4>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <div class="play-btn">▶</div>
+                        <span class="video-badge">Próximamente</span>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-category">Derivadas básicas</span>
+                        <h4>Regla de la potencia paso a paso</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <a href="contenido.html#tutoriales" class="btn btn-secondary">Ver todos los tutoriales</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo-section fade-in">
+        <div class="promo-content">
+            <h2>¿Listo para comprobar lo aprendido?</h2>
+            <p>Resuelve preguntas conceptuales, ejercicios matemáticos y utiliza un asistente que te ayudará a elegir el procedimiento correcto.</p>
+            <div class="hero-buttons">
+                <a href="practica.html#quiz" class="btn btn-lime">Iniciar quiz</a>
+                <a href="practica.html#asistente" class="btn btn-outline-light">Usar asistente</a>
+            </div>
+        </div>
+        <div class="promo-visual">
+            <div class="quiz-mock">
+                <div class="mock-q">¿Cuál es la derivada de x³?</div>
+                <div class="mock-opt">A. x²</div>
+                <div class="mock-opt">B. 3x</div>
+                <div class="mock-opt correct">C. 3x² <span class="check">✓</span></div>
+                <div class="mock-feedback">¡Respuesta correcta!</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials section-padding fade-in">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Dificultades reales que aprenderás a superar</h2>
+            </div>
+            <div class="grid-3">
+                <div class="testimonial-card">
+                    <p>"Me costaba saber qué procedimiento usar cuando aparecía una indeterminación."</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Tenía dificultad para resolver límites con raíces y analizar asíntotas."</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"No sabía qué regla de derivación aplicar en funciones más complejas."</p>
+                </div>
+            </div>
+            <p class="text-center mt-3 text-sec" style="font-size: 1.1rem; max-width: 700px; margin-inline: auto;">CALCULA+ responde estas dudas mediante ejemplos, explicaciones claras, tutoriales y práctica inmediata.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">CALCULA<span class="text-lime">+</span></div>
+            <p style="font-size: 1.1rem;">Plataforma educativa creada para facilitar el aprendizaje de Cálculo I.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contenido.html">Contenido</a></li>
+                <li><a href="contenido.html#tutoriales">Tutoriales</a></li>
+                <li><a href="contenido.html#recursos">Recursos</a></li>
+                <li><a href="contenido.html#faq">FAQ</a></li>
+                <li><a href="practica.html">Práctica</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 CALCULA+ | Proyecto académico de Cálculo I.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" aria-label="Volver arriba">↑</button>
+    <script src="js/main.js"></script>
+</body>
+</html>

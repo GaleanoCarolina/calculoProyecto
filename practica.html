@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULA+ | Práctica</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">CALCULA<span class="highlight">+</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contenido.html">Contenido</a></li>
+                <li><a href="contenido.html#tutoriales">Tutoriales</a></li>
+                <li><a href="contenido.html#recursos">Recursos</a></li>
+                <li><a href="contenido.html#faq">FAQ</a></li>
+            </ul>
+            <a href="practica.html" class="btn btn-primary nav-btn">Practicar ahora</a>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="page-header bg-dark text-center section-padding">
+        <h1 class="text-white">Practica y comprueba tu aprendizaje</h1>
+        <p class="text-white">Resuelve preguntas, analiza ejercicios y descubre qué procedimiento utilizar.</p>
+    </div>
+
+    <section id="asistente" class="section-padding bg-sec fade-in">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>No sé por dónde empezar</h2>
+                <p>Selecciona las características de tu ejercicio y recibe una recomendación del procedimiento adecuado.</p>
+            </div>
+            <div class="assistant-container card text-center p-3" id="assistant-card">
+                </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="section-padding fade-in">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Quiz de conceptos</h2>
+                <div class="best-score" id="best-score-display">Mejor puntaje: --</div>
+            </div>
+            <div class="quiz-container card" id="quiz-card">
+                <div id="quiz-progress-bar" class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+                <div class="quiz-header">
+                    <span id="q-counter">Pregunta 1 de 10</span>
+                </div>
+                <div id="quiz-content">
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ejercicios" class="section-padding bg-light fade-in">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Resuelve ejercicios</h2>
+            </div>
+            <div class="grid-2" id="exercises-grid">
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">CALCULA<span class="text-lime">+</span></div>
+            <p>Plataforma educativa creada para facilitar el aprendizaje de Cálculo I.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contenido.html">Contenido</a></li>
+                <li><a href="contenido.html#tutoriales">Tutoriales</a></li>
+                <li><a href="contenido.html#recursos">Recursos</a></li>
+                <li><a href="contenido.html#faq">FAQ</a></li>
+                <li><a href="practica.html">Práctica</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom"><p>© 2026 CALCULA+ | Proyecto académico de Cálculo I.</p></div>
+    </footer>
+
+    <button id="backToTop" aria-label="Volver arriba">↑</button>
+    <script src="js/main.js"></script>
+    <script src="js/practica.js"></script>
+</body>
+</html>
