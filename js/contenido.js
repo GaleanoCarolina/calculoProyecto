@@ -45,18 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. VIDEOS PLACEHOLDERS (ARREGLO EXACTO DE 10 VIDEOS SOLICITADO)
+    // 3. VIDEOS, NOMBRES DE ESTUDIANTES Y MINIATURAS
     const videos = [
-        { id: 1, categoria: "Límites al infinito", titulo: "Límite racional con grados iguales", descripcion: "Resolución paso a paso comparando coeficientes principales.", youtubeId: "", estado: "Próximamente" },
-        { id: 2, categoria: "Derivadas básicas", titulo: "Regla de la potencia paso a paso", descripcion: "Cómo derivar potencias de x correctamente.", youtubeId: "", estado: "Próximamente" },
-        { id: 3, categoria: "Límites al infinito", titulo: "Cuando el denominador domina", descripcion: "Ejercicio cuyo resultado se aproxima a cero.", youtubeId: "", estado: "Próximamente" },
-        { id: 4, categoria: "Derivadas básicas", titulo: "Derivada de un polinomio", descripcion: "Aplicación término por término.", youtubeId: "", estado: "Próximamente" },
-        { id: 5, categoria: "Límites al infinito", titulo: "Asíntotas horizontales", descripcion: "Cómo identificar el valor de la asíntota.", youtubeId: "", estado: "Próximamente" },
-        { id: 6, categoria: "Derivadas básicas", titulo: "Derivada de funciones con raíz", descripcion: "Conversión a exponentes fraccionarios.", youtubeId: "", estado: "Próximamente" },
-        { id: 7, categoria: "Límites al infinito", titulo: "Racionalización en límites con raíces", descripcion: "Uso del conjugado para resolver una indeterminación.", youtubeId: "", estado: "Próximamente" },
-        { id: 8, categoria: "Derivadas básicas", titulo: "Recta tangente y significado de la derivada", descripcion: "Interpretación gráfica de la pendiente.", youtubeId: "", estado: "Próximamente" },
-        { id: 9, categoria: "Límites al infinito", titulo: "Análisis de signo cuando x tiende a −∞", descripcion: "Cómo determinar si el resultado es positivo o negativo.", youtubeId: "", estado: "Próximamente" },
-        { id: 10, categoria: "Derivadas básicas", titulo: "Introducción a la regla de la cadena", descripcion: "Identificación de función interna y externa.", youtubeId: "", estado: "Próximamente" }
+        { id: 1, categoria: "Límites al infinito", titulo: "Límite racional con grados iguales", estudiante: "Krystel Alvarado", youtubeId: "couOuhnHjJ0", estado: "Disponible" },
+        { id: 2, categoria: "Derivadas básicas", titulo: "Regla de la potencia paso a paso", estudiante: "Krystel Alvarado", youtubeId: "HRtEM2dYosc", estado: "Disponible" },
+        { id: 3, categoria: "Límites al infinito", titulo: "Cuando el denominador domina", estudiante: "Rocio Ruano", youtubeId: "VY3FJipYg1s", estado: "Disponible" },
+        { id: 4, categoria: "Derivadas básicas", titulo: "Derivada de un polinomio", estudiante: "Rocio Ruano", youtubeId: "g0dcFjeYVyE", estado: "Disponible" },
+        { id: 5, categoria: "Derivadas básicas", titulo: "Derivada de funciones con raíz", estudiante: "Krystel Canas", youtubeId: "QY77oZ0MsUA", estado: "Disponible" },
+        { id: 6, categoria: "Límites al infinito", titulo: "Asíntotas horizontales", estudiante: "Krystel Canas", youtubeId: "FQIdZJIJp2s", estado: "Disponible" },
+        { id: 7, categoria: "Límites al infinito", titulo: "Racionalización en límites con raíces", estudiante: "Adriana Cruz", youtubeId: "lC_tiqJ97uU", estado: "Disponible" },
+        { id: 8, categoria: "Derivadas básicas", titulo: "Recta tangente y significado de la derivada", estudiante: "Adriana Cruz", youtubeId: "VBVQ8Fmr7-o", estado: "Disponible" },
+        { id: 9, categoria: "Límites al infinito", titulo: "Análisis de signo cuando x tiende a −∞", estudiante: "Genesis Galeano", youtubeId: "", estado: "Próximamente" },
+        { id: 10, categoria: "Derivadas básicas", titulo: "Introducción a la regla de la cadena", estudiante: "Genesis Galeano", youtubeId: "", estado: "Próximamente" }
     ];
 
     const videoGrid = document.getElementById('video-grid');
@@ -73,17 +73,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 const btnClass = isReady ? "btn-primary btn-yt" : "btn-outline disabled";
                 const btnText = isReady ? "Ver tutorial" : "Video próximamente";
                 
+                // Si el video está disponible, extraemos la miniatura de YouTube, si no, se queda el degradado
+                const thumbStyle = isReady ? `style="background-image: url('https://img.youtube.com/vi/${v.youtubeId}/hqdefault.jpg'); background-size: cover; background-position: center;"` : '';
+                
                 const card = document.createElement('div');
                 card.className = 'video-card fade-in visible';
+                
                 card.innerHTML = `
-                    <div class="video-thumb">
-                        <div class="play-btn">▶</div>
+                    <div class="video-thumb" ${thumbStyle}>
+                        <div class="play-btn" ${isReady ? `data-id="${v.youtubeId}"` : ''}>▶</div>
                         <span class="video-badge">${v.estado}</span>
                     </div>
                     <div class="video-info">
                         <span class="video-category">0${v.id} - ${v.categoria}</span>
-                        <h4>${v.titulo}</h4>
-                        <p class="text-sm text-sec mb-2">${v.descripcion}</p>
+                        <h4 style="margin-bottom: auto;">${v.titulo}</h4>
+                        <p class="text-sm text-purple mt-2 mb-2" style="font-weight: 600;">👨‍🎓 Estudiante: <span style="font-weight: normal; color: var(--text-main);">${v.estudiante}</span></p>
                         <button class="btn ${btnClass} mt-1 w-100" data-id="${v.youtubeId}">${btnText}</button>
                     </div>
                 `;
@@ -91,8 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Eventos para abrir modal
-        document.querySelectorAll('.btn-yt').forEach(btn => {
+        // Eventos para abrir modal de YouTube (Ahora funciona tanto el botón largo como el de Play en la imagen)
+        document.querySelectorAll('.btn-yt, .play-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const id = e.target.getAttribute('data-id');
                 if(id) {

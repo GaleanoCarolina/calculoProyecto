@@ -1,523 +1,426 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULA+ | Contenido</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALCULA+ | Contenido</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">CALCULA<span class="highlight">+</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="contenido.html" class="active">Contenido</a></li>
-                <li><a href="#tutoriales">Tutoriales</a></li>
-                <li><a href="#recursos">Recursos</a></li>
-                <li><a href="#faq">FAQ</a></li>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">CALCULA<span class="highlight">+</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="contenido.html" class="active">Contenido</a></li>
+        <li><a href="#tutoriales">Tutoriales</a></li>
+        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="practica.html" class="btn btn-primary nav-btn">Practicar ahora</a>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-header bg-sec text-center section-padding">
+    <h1>Contenido de aprendizaje</h1>
+    <p>Consulta conceptos, procedimientos, fórmulas, ejercicios resueltos, tutoriales y recursos de estudio.</p>
+  </div>
+
+  <div class="sticky-submenu">
+    <a href="#limites">Límites al infinito</a>
+    <a href="#derivadas">Derivadas básicas</a>
+    <a href="#formulas">Fórmulas</a>
+    <a href="#tutoriales">Tutoriales</a>
+    <a href="#recursos">Recursos</a>
+    <a href="#faq">FAQ</a>
+  </div>
+
+  <section id="limites" class="section-padding fade-in">
+    <div class="container">
+      <div class="section-header">
+        <h2>Límites al infinito</h2>
+        <p>Estudia el comportamiento de una función cuando x crece positiva o negativamente sin límite.</p>
+      </div>
+
+      <div class="concept-card highlight-card">
+        <p>Un límite al infinito permite analizar qué valor toma o hacia dónde se dirige una función cuando la variable x crece indefinidamente hacia +∞ o disminuye indefinidamente hacia −∞. Este análisis ayuda a comprender el comportamiento final de una gráfica y a identificar asíntotas horizontales.</p>
+        <div class="formula-box large">lim<sub>(x → ∞)</sub> f(x) = L</div>
+        <p class="text-sm mt-1">La función se aproxima a L cuando x toma valores cada vez mayores.</p>
+      </div>
+
+      <h3 class="mt-3">Comportamiento cuando x tiende a +∞ y −∞</h3>
+      <div class="grid-2 mt-2">
+        <div class="card">
+          <h4>x → +∞</h4>
+          <p>Analizamos qué ocurre cuando x toma valores positivos cada vez más grandes.</p>
+          <p class="math-example">Ejemplo: f(x) = 1/x</p>
+          <div class="formula-box">lim<sub>(x → +∞)</sub> 1/x = 0</div>
+          <p>La función se aproxima a cero por valores positivos.</p>
+        </div>
+        <div class="card">
+          <h4>x → −∞</h4>
+          <p>Analizamos qué ocurre cuando x toma valores negativos cada vez menores.</p>
+          <p class="math-example">Ejemplo: f(x) = 1/x</p>
+          <div class="formula-box">lim<sub>(x → −∞)</sub> 1/x = 0</div>
+          <p>La función se aproxima a cero por valores negativos.</p>
+        </div>
+      </div>
+
+      <h3 class="mt-3">Asíntotas verticales y horizontales</h3>
+      <div class="grid-2 mt-2">
+        <div class="card">
+          <h4>Asíntota horizontal</h4>
+          <p>Una recta horizontal y = L es una asíntota horizontal cuando la función se aproxima a L al hacer que x tienda a +∞ o −∞.</p>
+          <p class="math-example">Ejemplo: f(x) = (2x + 1) / (x - 3)</p>
+          <p class="text-sm">Procedimiento resumido: Como el numerador y denominador tienen el mismo grado, se dividen los coeficientes principales: 2/1 = 2.</p>
+          <div class="formula-box">lim<sub>(x → ∞)</sub> (2x + 1)/(x - 3) = 2</div>
+          <div class="alert-box success">Conclusión: y = 2 es una asíntota horizontal.</div>
+        </div>
+        <div class="card">
+          <h4>Asíntota vertical</h4>
+          <p>Una recta vertical x = a es una asíntota vertical cuando la función crece hacia +∞ o disminuye hacia −∞ al acercarse a ese valor.</p>
+          <p class="math-example">Ejemplo: f(x) = 1 / (x - 2)</p>
+          <div class="formula-box text-left">lim<sub>(x → 2+)</sub> 1/(x - 2) = +∞<br>lim<sub>(x → 2−)</sub> 1/(x - 2) = −∞</div>
+          <div class="alert-box success">Conclusión: x = 2 es una asíntota vertical.</div>
+        </div>
+      </div>
+
+      <div class="alert-box warning mt-2">Una función puede comportarse de manera diferente por la izquierda y por la derecha de una asíntota vertical.</div>
+      <h3 class="mt-3">Procedimiento general para resolver límites al infinito</h3>
+      <div class="timeline mt-2">
+        <div class="timeline-step"><span>1</span> <p>Identifica el tipo de expresión: polinómica, racional, radical o combinada.</p></div>
+        <div class="timeline-step"><span>2</span> <p>Observa si x tiende a +∞ o a −∞, ya que el signo final puede cambiar.</p></div>
+        <div class="timeline-step"><span>3</span> <p>Identifica el término dominante, es decir, el término de mayor grado.</p></div>
+        <div class="timeline-step">
+          <span>4</span>
+          <div>
+            <p>Si la función es racional, compara los grados del numerador y denominador.</p>
+            <ul class="mini-list">
+              <li>Grado numerador menor que denominador → el límite es 0.</li>
+              <li>Grados iguales → dividir coeficientes principales.</li>
+              <li>Grado numerador mayor → analizar crecimiento y signo.</li>
             </ul>
-            <a href="practica.html" class="btn btn-primary nav-btn">Practicar ahora</a>
-            <button class="hamburger" id="hamburger" aria-label="Menú">
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
-            </button>
+          </div>
         </div>
-    </nav>
+        <div class="timeline-step"><span>5</span> <p>Si aparecen raíces y surge una expresión como ∞ - ∞, utiliza racionalización con el conjugado.</p></div>
+        <div class="timeline-step"><span>6</span> <p>Analiza si el resultado es un número real, +∞ o −∞.</p></div>
+        <div class="timeline-step"><span>7</span> <p>Interpreta gráficamente el resultado y determina si existe alguna asíntota.</p></div>
+      </div>
 
-    <div class="page-header bg-sec text-center section-padding">
-        <h1>Contenido de aprendizaje</h1>
-        <p>Consulta conceptos, procedimientos, fórmulas, ejercicios resueltos, tutoriales y recursos de estudio.</p>
+      <h3 class="mt-3">Ejercicios resueltos de límites</h3>
+      <div class="accordion-container mt-2">
+        <details class="accordion">
+          <summary>Ejercicio 1: Grados iguales</summary>
+          <div class="accordion-content">
+            <p><strong>Problema:</strong> lim<sub>(x → ∞)</sub> (3x² - 5x + 2) / (x² + 4)</p>
+            <ol>
+              <li>El numerador y el denominador tienen grado 2.</li>
+              <li>Se toman los coeficientes principales: 3 y 1.</li>
+              <li>Se divide: 3 / 1 = 3.</li>
+              <li>Resultado final: 3.</li>
+              <li>Interpretación: la función tiene asíntota horizontal y = 3.</li>
+            </ol>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>Ejercicio 2: El denominador domina</summary>
+          <div class="accordion-content">
+            <p><strong>Problema:</strong> lim<sub>(x → ∞)</sub> (5x + 1) / (x² + 3)</p>
+            <ol>
+              <li>El numerador tiene grado 1.</li>
+              <li>El denominador tiene grado 2.</li>
+              <li>El denominador crece más rápido que el numerador.</li>
+              <li>Por lo tanto, la fracción se aproxima a cero.</li>
+              <li>Resultado final: 0.</li>
+              <li>Interpretación: la asíntota horizontal es y = 0.</li>
+            </ol>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>Ejercicio 3: Análisis de signo cuando x tiende a menos infinito</summary>
+          <div class="accordion-content">
+            <p><strong>Problema:</strong> lim<sub>(x → −∞)</sub> (2x³ + 1) / (x² - 4)</p>
+            <ol>
+              <li>El término dominante del numerador es 2x³.</li>
+              <li>El término dominante del denominador es x².</li>
+              <li>La expresión se comporta como 2x³/x² = 2x.</li>
+              <li>Cuando x → −∞, entonces 2x → −∞.</li>
+              <li>Resultado final: −∞.</li>
+            </ol>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>Ejercicio 4: Límite con raíz y racionalización</summary>
+          <div class="accordion-content">
+            <p><strong>Problema:</strong> lim<sub>(x → ∞)</sub> (√(x² + 5x) - x)</p>
+            <ol>
+              <li>Sustituir directamente produce una forma ∞ - ∞.</li>
+              <li>Multiplicamos y dividimos por el conjugado: (√(x² + 5x) + x).</li>
+              <li>El numerador queda: (x² + 5x) - x² = 5x.</li>
+              <li>La expresión queda: 5x / (√(x² + 5x) + x).</li>
+              <li>Dividimos numerador y denominador entre x: 5 / (√(1 + 5/x) + 1).</li>
+              <li>Cuando x → ∞, entonces 5/x → 0.</li>
+              <li>Resultado: 5 / (1 + 1) = 5/2.</li>
+            </ol>
+          </div>
+        </details>
+      </div>
     </div>
+  </section>
 
-    <div class="sticky-submenu">
-        <a href="#limites">Límites al infinito</a>
-        <a href="#derivadas">Derivadas básicas</a>
-        <a href="#formulas">Fórmulas</a>
-        <a href="#tutoriales">Tutoriales</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#faq">FAQ</a>
+  <hr class="section-divider">
+
+  <section id="derivadas" class="section-padding fade-in">
+    <div class="container">
+      <div class="section-header">
+        <h2>Derivadas básicas</h2>
+        <p>Comprende cómo cambia una función y aprende a calcular pendientes.</p>
+      </div>
+      <div class="concept-card highlight-card">
+        <p>La derivada representa la razón de cambio instantánea de una función. Geométricamente, corresponde a la pendiente de la recta tangente a la gráfica en un punto específico.</p>
+        <div class="formula-box large">f'(x) = lim<sub>(h → 0)</sub> [f(x+h) - f(x)] / h</div>
+        <ul class="mini-list mt-1">
+          <li>Si f'(x) > 0, la función está creciendo.</li>
+          <li>Si f'(x) < 0, la función está decreciendo.</li>
+          <li>Si f'(x) = 0, puede existir un máximo, mínimo o punto estacionario.</li>
+        </ul>
+        <div class="math-illustration mt-1">
+          <svg viewBox="0 0 200 100" width="150" height="75">
+            <path d="M10 90 Q 100 0, 190 90" stroke="#6527F4" stroke-width="3" fill="none"/>
+            <circle cx="100" cy="45" r="4" fill="#B6F13B"/>
+            <line x1="50" y1="45" x2="150" y2="45" stroke="#111936" stroke-width="2"/>
+          </svg>
+          <p class="text-sm">Pendiente instantánea</p>
+        </div>
+      </div>
+
+      <h3 class="mt-3">Recta secante y recta tangente</h3>
+      <div class="grid-2 mt-2">
+        <div class="card"><h4>Recta secante</h4><p>Une dos puntos diferentes de una curva y representa la pendiente promedio entre ambos.</p></div>
+        <div class="card"><h4>Recta tangente</h4><p>Toca la curva en un punto específico y representa la pendiente instantánea de la función.</p></div>
+      </div>
+
+      <div class="faq-card highlight-box mt-2">
+        <h4>Pregunta: ¿Cómo encuentro la pendiente si no tengo un segundo punto?</h4>
+        <p>Para obtener la pendiente instantánea no necesitamos elegir manualmente un segundo punto fijo. Utilizamos un incremento h, que representa un punto cercano, y hacemos que h se aproxime a cero. Ese proceso produce la derivada y la pendiente exacta de la recta tangente.</p>
+      </div>
+
+      <h3 class="mt-3">Reglas básicas de derivación</h3>
+      <div class="grid-3 mt-2">
+        <div class="card formula-rule-card"><h4>1. Derivada de una constante</h4><p class="rule-formula">d/dx (c) = 0</p><p class="rule-example">Ejemplo: d/dx (7) = 0</p></div>
+        <div class="card formula-rule-card"><h4>2. Regla de la potencia</h4><p class="rule-formula">d/dx (xⁿ) = nxⁿ⁻¹</p><p class="rule-example">Ejemplo: d/dx (x³) = 3x²</p></div>
+        <div class="card formula-rule-card"><h4>3. Multiplicación por constante</h4><p class="rule-formula">d/dx (c · f(x)) = c · f'(x)</p><p class="rule-example">Ejemplo: d/dx (5x²) = 10x</p></div>
+        <div class="card formula-rule-card"><h4>4. Suma y resta</h4><p class="rule-formula">d/dx [f(x) ± g(x)] = f'(x) ± g'(x)</p><p class="rule-example">Ejemplo: d/dx (x³ - 4x) = 3x² - 4</p></div>
+        <div class="card formula-rule-card"><h4>5. Derivada de una raíz</h4><p class="rule-formula">√x = x<sup>1/2</sup></p><p class="rule-example">Resultado: d/dx (√x) = 1 / (2√x)</p></div>
+        <div class="card formula-rule-card highlight-border"><h4>6. Regla de la cadena (Extra)</h4><p class="rule-formula">d/dx [g(x)]ⁿ = n[g(x)]ⁿ⁻¹ · g'(x)</p><p class="rule-example">Ej: d/dx (3x² + 1)⁴ = 24x(3x² + 1)³</p></div>
+      </div>
+
+      <h3 class="mt-3">Procedimiento paso a paso para derivar</h3>
+      <div class="timeline mt-2">
+        <div class="timeline-step"><span>1</span> <p>Identifica la expresión que debes derivar.</p></div>
+        <div class="timeline-step"><span>2</span> <p>Reescribe raíces o fracciones utilizando exponentes cuando sea conveniente. (Ejemplo: √x = x<sup>1/2</sup>)</p></div>
+        <div class="timeline-step"><span>3</span> <p>Identifica la regla que corresponde: constante, potencia, suma, resta o regla de la cadena.</p></div>
+        <div class="timeline-step"><span>4</span> <p>Aplica la regla término por término.</p></div>
+        <div class="timeline-step"><span>5</span> <p>Simplifica el resultado.</p></div>
+        <div class="timeline-step"><span>6</span> <p>Interpreta qué indica la derivada sobre el comportamiento de la función.</p></div>
+      </div>
+
+      <h3 class="mt-3">Ejercicios resueltos de derivadas</h3>
+      <div class="accordion-container mt-2">
+        <details class="accordion">
+          <summary>Ejercicio 1: Polinomio simple</summary>
+          <div class="accordion-content">
+            <p><strong>Problema:</strong> f(x) = x³ - 4x² + 2x - 7</p>
+            <p><strong>Procedimiento:</strong></p>
+            <ul><li>La derivada de x³ es 3x².</li><li>La derivada de −4x² es −8x.</li><li>La derivada de 2x es 2.</li><li>La derivada de −7 es 0.</li></ul>
+            <div class="alert-box success">Resultado: f'(x) = 3x² - 8x + 2</div>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>Ejercicio 2: Regla de potencia con coeficientes</summary>
+          <div class="accordion-content">
+            <p><strong>Problema:</strong> f(x) = 5x⁴ + 3x² - 9</p>
+            <p><strong>Procedimiento:</strong></p>
+            <ul><li>d/dx(5x⁴) = 20x³</li><li>d/dx(3x²) = 6x</li><li>d/dx(−9) = 0</li></ul>
+            <div class="alert-box success">Resultado: f'(x) = 20x³ + 6x</div>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>Ejercicio 3: Derivada de raíz</summary>
+          <div class="accordion-content">
+            <p><strong>Problema:</strong> f(x) = √x</p>
+            <ol><li>Convertir la raíz: √x = x<sup>1/2</sup>.</li><li>Aplicar regla de potencia: (1/2)x<sup>-1/2</sup>.</li><li>Reescribir: 1/(2√x).</li></ol>
+            <div class="alert-box success">Resultado: f'(x) = 1/(2√x)</div>
+          </div>
+        </details>
+        <details class="accordion">
+          <summary>Ejercicio 4: Regla de la cadena</summary>
+          <div class="accordion-content">
+            <p><strong>Problema:</strong> f(x) = (3x² + 1)⁴</p>
+            <ol><li>La función externa es una potencia cuarta.</li><li>La función interna es 3x² + 1.</li><li>Derivamos la externa: 4(3x² + 1)³.</li><li>Derivamos la interna: 6x.</li><li>Multiplicamos ambas expresiones.</li></ol>
+            <div class="alert-box success">Resultado: f'(x) = 24x(3x² + 1)³</div>
+          </div>
+        </details>
+      </div>
     </div>
+  </section>
 
-    <section id="limites" class="section-padding fade-in">
-        <div class="container">
-            <div class="section-header">
-                <h2>Límites al infinito</h2>
-                <p>Estudia el comportamiento de una función cuando x crece positiva o negativamente sin límite.</p>
-            </div>
-            
-            <div class="concept-card highlight-card">
-                <p>Un límite al infinito permite analizar qué valor toma o hacia dónde se dirige una función cuando la variable x crece indefinidamente hacia +∞ o disminuye indefinidamente hacia −∞. Este análisis ayuda a comprender el comportamiento final de una gráfica y a identificar asíntotas horizontales.</p>
-                <div class="formula-box large">lim<sub>(x → ∞)</sub> f(x) = L</div>
-                <p class="text-sm mt-1">La función se aproxima a L cuando x toma valores cada vez mayores.</p>
-            </div>
-
-            <h3 class="mt-3">Comportamiento cuando x tiende a +∞ y −∞</h3>
-            <div class="grid-2 mt-2">
-                <div class="card">
-                    <h4>x → +∞</h4>
-                    <p>Analizamos qué ocurre cuando x toma valores positivos cada vez más grandes.</p>
-                    <p class="math-example">Ejemplo: f(x) = 1/x</p>
-                    <div class="formula-box">lim<sub>(x → +∞)</sub> 1/x = 0</div>
-                    <p>La función se aproxima a cero por valores positivos.</p>
-                </div>
-                <div class="card">
-                    <h4>x → −∞</h4>
-                    <p>Analizamos qué ocurre cuando x toma valores negativos cada vez menores.</p>
-                    <p class="math-example">Ejemplo: f(x) = 1/x</p>
-                    <div class="formula-box">lim<sub>(x → −∞)</sub> 1/x = 0</div>
-                    <p>La función se aproxima a cero por valores negativos.</p>
-                </div>
-            </div>
-
-            <h3 class="mt-3">Asíntotas verticales y horizontales</h3>
-            <div class="grid-2 mt-2">
-                <div class="card">
-                    <h4>Asíntota horizontal</h4>
-                    <p>Una recta horizontal y = L es una asíntota horizontal cuando la función se aproxima a L al hacer que x tienda a +∞ o −∞.</p>
-                    <p class="math-example">Ejemplo: f(x) = (2x + 1) / (x - 3)</p>
-                    <p class="text-sm">Procedimiento resumido: Como el numerador y denominador tienen el mismo grado, se dividen los coeficientes principales: 2/1 = 2.</p>
-                    <div class="formula-box">lim<sub>(x → ∞)</sub> (2x + 1)/(x - 3) = 2</div>
-                    <div class="alert-box success">Conclusión: y = 2 es una asíntota horizontal.</div>
-                </div>
-                <div class="card">
-                    <h4>Asíntota vertical</h4>
-                    <p>Una recta vertical x = a es una asíntota vertical cuando la función crece hacia +∞ o disminuye hacia −∞ al acercarse a ese valor.</p>
-                    <p class="math-example">Ejemplo: f(x) = 1 / (x - 2)</p>
-                    <div class="formula-box text-left">lim<sub>(x → 2+)</sub> 1/(x - 2) = +∞<br>lim<sub>(x → 2−)</sub> 1/(x - 2) = −∞</div>
-                    <div class="alert-box success">Conclusión: x = 2 es una asíntota vertical.</div>
-                </div>
-            </div>
-            <div class="alert-box warning mt-2">Una función puede comportarse de manera diferente por la izquierda y por la derecha de una asíntota vertical.</div>
-
-            <h3 class="mt-3">Procedimiento general para resolver límites al infinito</h3>
-            <div class="timeline mt-2">
-                <div class="timeline-step"><span>1</span> <p>Identifica el tipo de expresión: polinómica, racional, radical o combinada.</p></div>
-                <div class="timeline-step"><span>2</span> <p>Observa si x tiende a +∞ o a −∞, ya que el signo final puede cambiar.</p></div>
-                <div class="timeline-step"><span>3</span> <p>Identifica el término dominante, es decir, el término de mayor grado.</p></div>
-                <div class="timeline-step">
-                    <span>4</span> 
-                    <div>
-                        <p>Si la función es racional, compara los grados del numerador y denominador.</p>
-                        <ul class="mini-list">
-                            <li>Grado numerador menor que denominador → el límite es 0.</li>
-                            <li>Grados iguales → dividir coeficientes principales.</li>
-                            <li>Grado numerador mayor → analizar crecimiento y signo.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-step"><span>5</span> <p>Si aparecen raíces y surge una expresión como ∞ - ∞, utiliza racionalización con el conjugado.</p></div>
-                <div class="timeline-step"><span>6</span> <p>Analiza si el resultado es un número real, +∞ o −∞.</p></div>
-                <div class="timeline-step"><span>7</span> <p>Interpreta gráficamente el resultado y determina si existe alguna asíntota.</p></div>
-            </div>
-
-            <h3 class="mt-3">Ejercicios resueltos de límites</h3>
-            <div class="accordion-container mt-2">
-                <details class="accordion">
-                    <summary>Ejercicio 1: Grados iguales</summary>
-                    <div class="accordion-content">
-                        <p><strong>Problema:</strong> lim<sub>(x → ∞)</sub> (3x² - 5x + 2) / (x² + 4)</p>
-                        <ol>
-                            <li>El numerador y el denominador tienen grado 2.</li>
-                            <li>Se toman los coeficientes principales: 3 y 1.</li>
-                            <li>Se divide: 3 / 1 = 3.</li>
-                            <li>Resultado final: 3.</li>
-                            <li>Interpretación: la función tiene asíntota horizontal y = 3.</li>
-                        </ol>
-                    </div>
-                </details>
-                <details class="accordion">
-                    <summary>Ejercicio 2: El denominador domina</summary>
-                    <div class="accordion-content">
-                        <p><strong>Problema:</strong> lim<sub>(x → ∞)</sub> (5x + 1) / (x² + 3)</p>
-                        <ol>
-                            <li>El numerador tiene grado 1.</li>
-                            <li>El denominador tiene grado 2.</li>
-                            <li>El denominador crece más rápido que el numerador.</li>
-                            <li>Por lo tanto, la fracción se aproxima a cero.</li>
-                            <li>Resultado final: 0.</li>
-                            <li>Interpretación: la asíntota horizontal es y = 0.</li>
-                        </ol>
-                    </div>
-                </details>
-                <details class="accordion">
-                    <summary>Ejercicio 3: Análisis de signo cuando x tiende a menos infinito</summary>
-                    <div class="accordion-content">
-                        <p><strong>Problema:</strong> lim<sub>(x → −∞)</sub> (2x³ + 1) / (x² - 4)</p>
-                        <ol>
-                            <li>El término dominante del numerador es 2x³.</li>
-                            <li>El término dominante del denominador es x².</li>
-                            <li>La expresión se comporta como 2x³/x² = 2x.</li>
-                            <li>Cuando x → −∞, entonces 2x → −∞.</li>
-                            <li>Resultado final: −∞.</li>
-                        </ol>
-                    </div>
-                </details>
-                <details class="accordion">
-                    <summary>Ejercicio 4: Límite con raíz y racionalización</summary>
-                    <div class="accordion-content">
-                        <p><strong>Problema:</strong> lim<sub>(x → ∞)</sub> (√(x² + 5x) - x)</p>
-                        <ol>
-                            <li>Sustituir directamente produce una forma ∞ - ∞.</li>
-                            <li>Multiplicamos y dividimos por el conjugado: (√(x² + 5x) + x).</li>
-                            <li>El numerador queda: (x² + 5x) - x² = 5x.</li>
-                            <li>La expresión queda: 5x / (√(x² + 5x) + x).</li>
-                            <li>Dividimos numerador y denominador entre x: 5 / (√(1 + 5/x) + 1).</li>
-                            <li>Cuando x → ∞, entonces 5/x → 0.</li>
-                            <li>Resultado: 5 / (1 + 1) = 5/2.</li>
-                        </ol>
-                    </div>
-                </details>
-            </div>
+  <section id="formulas" class="section-padding bg-sec fade-in">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Formulario rápido</h2>
+        <p>Consulta y copia las fórmulas esenciales de cada tema.</p>
+      </div>
+      <div class="grid-2">
+        <div class="formula-group">
+          <h3>Fórmulas de límites</h3>
+          <div class="formula-item"><div class="f-text">Grado numerador &lt; denominador</div><div class="f-math">lim = 0</div><button class="btn-copy" data-formula="lim = 0">Copiar fórmula</button></div>
+          <div class="formula-item"><div class="f-text">Grados iguales</div><div class="f-math">lim = coef. num / coef. den</div><button class="btn-copy" data-formula="lim = coeficiente principal del numerador / coeficiente principal del denominador">Copiar fórmula</button></div>
+          <div class="formula-item"><div class="f-text">Asíntota horizontal</div><div class="f-math">lim(x → ±∞) f(x) = L ⇒ y = L</div><button class="btn-copy" data-formula="lim(x → ±∞) f(x) = L ⇒ y = L">Copiar fórmula</button></div>
+          <div class="formula-item"><div class="f-text">Asíntota vertical</div><div class="f-math">lim(x → a±) f(x) = ±∞ ⇒ x = a</div><button class="btn-copy" data-formula="lim(x → a±) f(x) = ±∞ ⇒ x = a">Copiar fórmula</button></div>
+          <div class="formula-item"><div class="f-text">Racionalización</div><div class="f-math">(a - b)(a + b) = a² - b²</div><button class="btn-copy" data-formula="(a - b)(a + b) = a² - b²">Copiar fórmula</button></div>
         </div>
-    </section>
-
-    <hr class="section-divider">
-
-    <section id="derivadas" class="section-padding fade-in">
-        <div class="container">
-            <div class="section-header">
-                <h2>Derivadas básicas</h2>
-                <p>Comprende cómo cambia una función y aprende a calcular pendientes.</p>
-            </div>
-
-            <div class="concept-card highlight-card">
-                <p>La derivada representa la razón de cambio instantánea de una función. Geométricamente, corresponde a la pendiente de la recta tangente a la gráfica en un punto específico.</p>
-                <div class="formula-box large">f'(x) = lim<sub>(h → 0)</sub> [f(x+h) - f(x)] / h</div>
-                <ul class="mini-list mt-1">
-                    <li>Si f'(x) > 0, la función está creciendo.</li>
-                    <li>Si f'(x) < 0, la función está decreciendo.</li>
-                    <li>Si f'(x) = 0, puede existir un máximo, mínimo o punto estacionario.</li>
-                </ul>
-                <div class="math-illustration mt-1">
-                    <svg viewBox="0 0 200 100" width="150" height="75">
-                        <path d="M10 90 Q 100 0, 190 90" stroke="#6527F4" stroke-width="3" fill="none"/>
-                        <circle cx="100" cy="45" r="4" fill="#B6F13B"/>
-                        <line x1="50" y1="45" x2="150" y2="45" stroke="#111936" stroke-width="2"/>
-                    </svg>
-                    <p class="text-sm">Pendiente instantánea</p>
-                </div>
-            </div>
-
-            <h3 class="mt-3">Recta secante y recta tangente</h3>
-            <div class="grid-2 mt-2">
-                <div class="card">
-                    <h4>Recta secante</h4>
-                    <p>Une dos puntos diferentes de una curva y representa la pendiente promedio entre ambos.</p>
-                </div>
-                <div class="card">
-                    <h4>Recta tangente</h4>
-                    <p>Toca la curva en un punto específico y representa la pendiente instantánea de la función.</p>
-                </div>
-            </div>
-            <div class="faq-card highlight-box mt-2">
-                <h4>Pregunta: ¿Cómo encuentro la pendiente si no tengo un segundo punto?</h4>
-                <p>Para obtener la pendiente instantánea no necesitamos elegir manualmente un segundo punto fijo. Utilizamos un incremento h, que representa un punto cercano, y hacemos que h se aproxime a cero. Ese proceso produce la derivada y la pendiente exacta de la recta tangente.</p>
-            </div>
-
-            <h3 class="mt-3">Reglas básicas de derivación</h3>
-            <div class="grid-3 mt-2">
-                <div class="card formula-rule-card">
-                    <h4>1. Derivada de una constante</h4>
-                    <p class="rule-formula">d/dx (c) = 0</p>
-                    <p class="rule-example">Ejemplo: d/dx (7) = 0</p>
-                </div>
-                <div class="card formula-rule-card">
-                    <h4>2. Regla de la potencia</h4>
-                    <p class="rule-formula">d/dx (xⁿ) = nxⁿ⁻¹</p>
-                    <p class="rule-example">Ejemplo: d/dx (x³) = 3x²</p>
-                </div>
-                <div class="card formula-rule-card">
-                    <h4>3. Multiplicación por constante</h4>
-                    <p class="rule-formula">d/dx (c · f(x)) = c · f'(x)</p>
-                    <p class="rule-example">Ejemplo: d/dx (5x²) = 10x</p>
-                </div>
-                <div class="card formula-rule-card">
-                    <h4>4. Suma y resta</h4>
-                    <p class="rule-formula">d/dx [f(x) ± g(x)] = f'(x) ± g'(x)</p>
-                    <p class="rule-example">Ejemplo: d/dx (x³ - 4x) = 3x² - 4</p>
-                </div>
-                <div class="card formula-rule-card">
-                    <h4>5. Derivada de una raíz</h4>
-                    <p class="rule-formula">√x = x<sup>1/2</sup></p>
-                    <p class="rule-example">Resultado: d/dx (√x) = 1 / (2√x)</p>
-                </div>
-                <div class="card formula-rule-card highlight-border">
-                    <h4>6. Regla de la cadena (Extra)</h4>
-                    <p class="rule-formula">d/dx [g(x)]ⁿ = n[g(x)]ⁿ⁻¹ · g'(x)</p>
-                    <p class="rule-example">Ej: d/dx (3x² + 1)⁴ = 24x(3x² + 1)³</p>
-                </div>
-            </div>
-
-            <h3 class="mt-3">Procedimiento paso a paso para derivar</h3>
-            <div class="timeline mt-2">
-                <div class="timeline-step"><span>1</span> <p>Identifica la expresión que debes derivar.</p></div>
-                <div class="timeline-step"><span>2</span> <p>Reescribe raíces o fracciones utilizando exponentes cuando sea conveniente. (Ejemplo: √x = x<sup>1/2</sup>)</p></div>
-                <div class="timeline-step"><span>3</span> <p>Identifica la regla que corresponde: constante, potencia, suma, resta o regla de la cadena.</p></div>
-                <div class="timeline-step"><span>4</span> <p>Aplica la regla término por término.</p></div>
-                <div class="timeline-step"><span>5</span> <p>Simplifica el resultado.</p></div>
-                <div class="timeline-step"><span>6</span> <p>Interpreta qué indica la derivada sobre el comportamiento de la función.</p></div>
-            </div>
-
-            <h3 class="mt-3">Ejercicios resueltos de derivadas</h3>
-            <div class="accordion-container mt-2">
-                <details class="accordion">
-                    <summary>Ejercicio 1: Polinomio simple</summary>
-                    <div class="accordion-content">
-                        <p><strong>Problema:</strong> f(x) = x³ - 4x² + 2x - 7</p>
-                        <p><strong>Procedimiento:</strong></p>
-                        <ul>
-                            <li>La derivada de x³ es 3x².</li>
-                            <li>La derivada de −4x² es −8x.</li>
-                            <li>La derivada de 2x es 2.</li>
-                            <li>La derivada de −7 es 0.</li>
-                        </ul>
-                        <div class="alert-box success">Resultado: f'(x) = 3x² - 8x + 2</div>
-                    </div>
-                </details>
-                <details class="accordion">
-                    <summary>Ejercicio 2: Regla de potencia con coeficientes</summary>
-                    <div class="accordion-content">
-                        <p><strong>Problema:</strong> f(x) = 5x⁴ + 3x² - 9</p>
-                        <p><strong>Procedimiento:</strong></p>
-                        <ul>
-                            <li>d/dx(5x⁴) = 20x³</li>
-                            <li>d/dx(3x²) = 6x</li>
-                            <li>d/dx(−9) = 0</li>
-                        </ul>
-                        <div class="alert-box success">Resultado: f'(x) = 20x³ + 6x</div>
-                    </div>
-                </details>
-                <details class="accordion">
-                    <summary>Ejercicio 3: Derivada de raíz</summary>
-                    <div class="accordion-content">
-                        <p><strong>Problema:</strong> f(x) = √x</p>
-                        <ol>
-                            <li>Convertir la raíz: √x = x<sup>1/2</sup>.</li>
-                            <li>Aplicar regla de potencia: (1/2)x<sup>-1/2</sup>.</li>
-                            <li>Reescribir: 1/(2√x).</li>
-                        </ol>
-                        <div class="alert-box success">Resultado: f'(x) = 1/(2√x)</div>
-                    </div>
-                </details>
-                <details class="accordion">
-                    <summary>Ejercicio 4: Regla de la cadena</summary>
-                    <div class="accordion-content">
-                        <p><strong>Problema:</strong> f(x) = (3x² + 1)⁴</p>
-                        <ol>
-                            <li>La función externa es una potencia cuarta.</li>
-                            <li>La función interna es 3x² + 1.</li>
-                            <li>Derivamos la externa: 4(3x² + 1)³.</li>
-                            <li>Derivamos la interna: 6x.</li>
-                            <li>Multiplicamos ambas expresiones.</li>
-                        </ol>
-                        <div class="alert-box success">Resultado: f'(x) = 24x(3x² + 1)³</div>
-                    </div>
-                </details>
-            </div>
+        <div class="formula-group">
+          <h3>Fórmulas de derivadas</h3>
+          <div class="formula-item"><div class="f-text">Constante</div><div class="f-math">d/dx(c) = 0</div><button class="btn-copy" data-formula="d/dx(c) = 0">Copiar fórmula</button></div>
+          <div class="formula-item"><div class="f-text">Potencia</div><div class="f-math">d/dx(xⁿ) = nxⁿ⁻¹</div><button class="btn-copy" data-formula="d/dx(xⁿ) = nxⁿ⁻¹">Copiar fórmula</button></div>
+          <div class="formula-item"><div class="f-text">Suma</div><div class="f-math">(f + g)' = f' + g'</div><button class="btn-copy" data-formula="(f + g)' = f' + g'">Copiar fórmula</button></div>
+          <div class="formula-item"><div class="f-text">Resta</div><div class="f-math">(f - g)' = f' - g'</div><button class="btn-copy" data-formula="(f - g)' = f' - g'">Copiar fórmula</button></div>
+          <div class="formula-item"><div class="f-text">Raíz</div><div class="f-math">d/dx(√x) = 1/(2√x)</div><button class="btn-copy" data-formula="d/dx(√x) = 1/(2√x)">Copiar fórmula</button></div>
+          <div class="formula-item"><div class="f-text">Regla de la cadena</div><div class="f-math">d/dx[f(g(x))] = f'(g(x)) · g'(x)</div><button class="btn-copy" data-formula="d/dx[f(g(x))] = f'(g(x)) · g'(x)">Copiar fórmula</button></div>
         </div>
-    </section>
-
-    <section id="formulas" class="section-padding bg-sec fade-in">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Formulario rápido</h2>
-                <p>Consulta y copia las fórmulas esenciales de cada tema.</p>
-            </div>
-            <div class="grid-2">
-                <div class="formula-group">
-                    <h3>Fórmulas de límites</h3>
-                    <div class="formula-item">
-                        <div class="f-text">Grado numerador < denominador</div>
-                        <div class="f-math">lim = 0</div>
-                        <button class="btn-copy" data-formula="lim = 0">Copiar fórmula</button>
-                    </div>
-                    <div class="formula-item">
-                        <div class="f-text">Grados iguales</div>
-                        <div class="f-math">lim = coef. num / coef. den</div>
-                        <button class="btn-copy" data-formula="lim = coeficiente principal del numerador / coeficiente principal del denominador">Copiar fórmula</button>
-                    </div>
-                    <div class="formula-item">
-                        <div class="f-text">Asíntota horizontal</div>
-                        <div class="f-math">lim(x → ±∞) f(x) = L ⇒ y = L</div>
-                        <button class="btn-copy" data-formula="lim(x → ±∞) f(x) = L  ⇒  y = L">Copiar fórmula</button>
-                    </div>
-                    <div class="formula-item">
-                        <div class="f-text">Asíntota vertical</div>
-                        <div class="f-math">lim(x → a±) f(x) = ±∞ ⇒ x = a</div>
-                        <button class="btn-copy" data-formula="lim(x → a±) f(x) = ±∞  ⇒  x = a">Copiar fórmula</button>
-                    </div>
-                    <div class="formula-item">
-                        <div class="f-text">Racionalización</div>
-                        <div class="f-math">(a - b)(a + b) = a² - b²</div>
-                        <button class="btn-copy" data-formula="(a - b)(a + b) = a² - b²">Copiar fórmula</button>
-                    </div>
-                </div>
-                <div class="formula-group">
-                    <h3>Fórmulas de derivadas</h3>
-                    <div class="formula-item">
-                        <div class="f-text">Constante</div>
-                        <div class="f-math">d/dx(c) = 0</div>
-                        <button class="btn-copy" data-formula="d/dx(c) = 0">Copiar fórmula</button>
-                    </div>
-                    <div class="formula-item">
-                        <div class="f-text">Potencia</div>
-                        <div class="f-math">d/dx(xⁿ) = nxⁿ⁻¹</div>
-                        <button class="btn-copy" data-formula="d/dx(xⁿ) = nxⁿ⁻¹">Copiar fórmula</button>
-                    </div>
-                    <div class="formula-item">
-                        <div class="f-text">Suma</div>
-                        <div class="f-math">(f + g)' = f' + g'</div>
-                        <button class="btn-copy" data-formula="(f + g)' = f' + g'">Copiar fórmula</button>
-                    </div>
-                    <div class="formula-item">
-                        <div class="f-text">Resta</div>
-                        <div class="f-math">(f - g)' = f' - g'</div>
-                        <button class="btn-copy" data-formula="(f - g)' = f' - g'">Copiar fórmula</button>
-                    </div>
-                    <div class="formula-item">
-                        <div class="f-text">Raíz</div>
-                        <div class="f-math">d/dx(√x) = 1/(2√x)</div>
-                        <button class="btn-copy" data-formula="d/dx(√x) = 1/(2√x)">Copiar fórmula</button>
-                    </div>
-                    <div class="formula-item">
-                        <div class="f-text">Regla de la cadena</div>
-                        <div class="f-math">d/dx[f(g(x))] = f'(g(x)) · g'(x)</div>
-                        <button class="btn-copy" data-formula="d/dx[f(g(x))] = f'(g(x)) · g'(x)">Copiar fórmula</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="tutoriales" class="section-padding fade-in">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Tutoriales en video</h2>
-                <p>Diez videos diseñados para explicar ejercicios de límites y derivadas paso a paso.</p>
-            </div>
-            <div class="filter-controls text-center mt-2">
-                <button class="filter-btn active" data-filter="Todos">Todos</button>
-                <button class="filter-btn" data-filter="Límites al infinito">Límites al infinito</button>
-                <button class="filter-btn" data-filter="Derivadas básicas">Derivadas básicas</button>
-            </div>
-            <div id="video-grid" class="grid-3 mt-3">
-                </div>
-        </div>
-    </section>
-
-    <section id="recursos" class="section-padding bg-light fade-in">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Recursos descargables</h2>
-                <p>Material de apoyo preparado para estudiar y repasar.</p>
-            </div>
-            <div class="grid-4 mt-3">
-                <div class="resource-card">
-                    <div class="r-icon">📄</div>
-                    <span class="r-cat">Límites</span>
-                    <h4>Guía de límites al infinito</h4>
-                    <p>Explicaciones, asíntotas y ejercicios resueltos.</p>
-                    <span class="badge"></span>
-                    <a href="assets/recursos/limitesinfinitos.pdf" download="Guia_Limites_Al_Infinito.pdf" class="btn btn-outline mt-1 w-100">Descargar PDF</a>
-
-                </div>
-                <div class="resource-card">
-                    <div class="r-icon">📄</div>
-                    <span class="r-cat">+ Límites</span>
-                    <h4>Clase 4 presentada en clase</h4>
-                    <p>Conceptos, reglas principales y ejemplos.</p>
-                    <span class="badge"></span>
-                    <a href="assets/recursos/limitesclase4.pdf" download="Guia_Limites_Al_Infinito2.pdf" class="btn btn-outline mt-1 w-100">Descargar PDF</a>
-                </div>
-                <div class="resource-card">
-                    <div class="r-icon">📄</div>
-                    <span class="r-cat">Derivadas</span>
-                    <h4>Resumen de derivadas basicas</h4>
-                    <p>Conceptos, reglas principales y ejemplos.</p>
-                    <span class="badge"></span>
-                    <a href="assets/recursos/ejerciciosderivadas.pdf" download="Guia_Derivadas.pdf" class="btn btn-outline mt-1 w-100">Descargar PDF</a>
-
-                </div>
-                <div class="resource-card">
-                    <div class="r-icon">📄</div>
-                    <span class="r-cat">Ejercicios de derivadas</span>
-                    <h4>Banco de ejercicios</h4>
-                    <p>Problemas adicionales para reforzar lo aprendido.</p>
-                    <span class="badge"></span>
-                    <a href="assets/recursos/ejerciciosderivadas.pdf" download="Ejercicios_Derivadas.pdf" class="btn btn-outline mt-1 w-100">Descargar PDF</a>
-                </div>
-            </div>
-            <p class="text-center mt-2 text-sm text-sec">Los documentos podrán descargarse directamente desde esta sección una vez incorporados al proyecto. No se requiere base de datos.</p>
-        </div>
-    </section>
-
-    <section id="faq" class="section-padding fade-in">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Preguntas frecuentes</h2>
-                <p>Respuestas a dificultades reales expresadas por estudiantes del curso.</p>
-            </div>
-            <div class="search-container text-center mt-2">
-                <input type="text" id="faq-search" placeholder="Buscar una duda: raíces, asíntotas, pendiente, derivadas..." class="search-input">
-            </div>
-            <div class="faq-list mt-3" id="faq-container">
-                <h3 class="faq-category-title">A. Límites al infinito</h3>
-                <details class="accordion faq-item"><summary>¿Cómo sé qué procedimiento utilizar en un límite al infinito?</summary><div class="accordion-content"><p>Primero identifica el tipo de expresión. Si es una fracción de polinomios, compara los grados del numerador y del denominador. Si aparecen raíces y obtienes una expresión como ∞ - ∞, normalmente conviene racionalizar. Si el resultado parece crecer sin límite, analiza el término dominante y su signo.</p></div></details>
-                <details class="accordion faq-item"><summary>¿Por qué los límites con raíces resultan más complicados?</summary><div class="accordion-content"><p>Las raíces pueden producir expresiones que no se simplifican mediante sustitución directa, especialmente formas como ∞ - ∞. En estos casos se utiliza el conjugado para racionalizar la expresión y transformarla en una forma más sencilla de evaluar.</p></div></details>
-                <details class="accordion faq-item"><summary>¿Cómo determino si el resultado es +∞ o −∞?</summary><div class="accordion-content"><p>Debes observar el signo del término dominante. Por ejemplo, si una expresión se comporta como 2x, entonces cuando x → +∞ el resultado es positivo, pero cuando x → −∞ el resultado es negativo.</p></div></details>
-                <details class="accordion faq-item"><summary>¿Qué hago cuando la sustitución directa produce una indeterminación?</summary><div class="accordion-content"><p>Una indeterminación indica que necesitas transformar la expresión. Puedes factorizar, dividir entre la potencia de mayor grado o racionalizar cuando existan raíces. Después de simplificar, vuelve a analizar el límite.</p></div></details>
-                <details class="accordion faq-item"><summary>¿Por qué una función puede tener comportamientos diferentes por la izquierda y por la derecha?</summary><div class="accordion-content"><p>Cerca de una asíntota vertical, el denominador puede cambiar de signo. Por ejemplo, en f(x) = 1/(x - 2), al acercarse a 2 por la derecha el resultado es +∞, mientras que por la izquierda es −∞.</p></div></details>
-
-                <h3 class="faq-category-title mt-3">B. Asíntotas</h3>
-                <details class="accordion faq-item"><summary>¿Cómo identifico una asíntota horizontal?</summary><div class="accordion-content"><p>Existe una asíntota horizontal cuando la función se aproxima a un valor fijo L mientras x → +∞ o x → −∞. Si el límite vale L, entonces la recta y = L es la asíntota horizontal.</p></div></details>
-                <details class="accordion faq-item"><summary>¿Cómo identifico una asíntota vertical?</summary><div class="accordion-content"><p>Existe una asíntota vertical cuando la función crece hacia +∞ o disminuye hacia −∞ al acercarse x a un valor específico. Si ocurre al acercarse a x = a, entonces x = a es una asíntota vertical.</p></div></details>
-                <details class="accordion faq-item"><summary>¿Por qué es importante interpretar gráficamente un límite?</summary><div class="accordion-content"><p>Porque el límite no solamente da un resultado numérico: también describe hacia dónde se dirige la gráfica, si se acerca a una línea horizontal o si crece sin límite cerca de una asíntota vertical.</p></div></details>
-
-                <h3 class="faq-category-title mt-3">C. Derivadas básicas</h3>
-                <details class="accordion faq-item"><summary>¿Qué significa realmente una derivada?</summary><div class="accordion-content"><p>La derivada mide cómo cambia una función en un punto específico. Geométricamente representa la pendiente de la recta tangente. Permite analizar si una función crece, decrece o presenta un punto estacionario.</p></div></details>
-                <details class="accordion faq-item"><summary>¿Cuál es la diferencia entre recta secante y recta tangente?</summary><div class="accordion-content"><p>La recta secante une dos puntos de una curva y representa un cambio promedio. La recta tangente toca la curva en un punto específico y representa el cambio instantáneo, que es justamente lo que mide la derivada.</p></div></details>
-                <details class="accordion faq-item"><summary>¿Cómo puedo encontrar la pendiente si solo tengo un punto?</summary><div class="accordion-content"><p>Para encontrar la pendiente instantánea se utiliza un punto muy cercano representado por h. Luego se hace que h se aproxime a cero. Ese procedimiento permite obtener la pendiente exacta de la recta tangente.</p></div></details>
-                <details class="accordion faq-item"><summary>¿Cómo sé qué regla de derivación utilizar?</summary><div class="accordion-content"><p>Observa la estructura de la función. Si es una potencia de x, utiliza la regla de potencia. Si contiene sumas o restas, deriva término por término. Si aparece una raíz, conviértela en exponente fraccionario. Si hay una función dentro de otra, utiliza la regla de la cadena.</p></div></details>
-                <details class="accordion faq-item"><summary>¿Cómo se deriva una función que contiene una raíz?</summary><div class="accordion-content"><p>Primero convierte la raíz en potencia fraccionaria. Por ejemplo, √x = x^(1/2). Después aplica la regla de potencia, obteniendo (1/2)x^(-1/2), que también puede escribirse como 1/(2√x).</p></div></details>
-                <details class="accordion faq-item"><summary>¿Por qué la regla de la cadena suele causar dificultad?</summary><div class="accordion-content"><p>Porque requiere identificar dos partes: una función externa y una interna. Primero se deriva la función externa conservando la interna, y después se multiplica por la derivada de la función interna.</p></div></details>
-                <details class="accordion faq-item"><summary>¿Qué sucede cuando la función no está despejada como y = f(x)?</summary><div class="accordion-content"><p>Cuando x e y aparecen mezcladas en una ecuación, puede utilizarse derivación implícita. En ese procedimiento se derivan ambos lados respecto a x y los términos con y producen un factor dy/dx. Este contenido es una ampliación del tema básico.</p></div></details>
-
-                <h3 class="faq-category-title mt-3">D. Continuidad y límites adicionales</h3>
-                <details class="accordion faq-item"><summary>¿Cuándo una función es continua?</summary><div class="accordion-content"><p>Una función es continua en un punto cuando cumple tres condiciones: está definida en ese punto, existe el límite al aproximarse a ese punto y el límite coincide con el valor de la función.</p></div></details>
-                <details class="accordion faq-item"><summary>¿Por qué los límites trigonométricos pueden ser difíciles?</summary><div class="accordion-content"><p>Porque suelen presentar indeterminaciones y requieren reconocer identidades trigonométricas o límites notables. Aunque no son el tema central de esta plataforma, forman parte importante del estudio posterior de límites.</p></div></details>
-            </div>
-            <div id="no-faq-msg" class="hidden text-center mt-2 text-sec">No se encontraron resultados para tu búsqueda.</div>
-        </div>
-    </section>
-
-    <div id="yt-modal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal">&times;</button>
-            <div class="video-container" id="iframe-container"></div>
-        </div>
+      </div>
     </div>
+  </section>
 
-    <div id="toast" class="toast">Fórmula copiada</div>
+  <section id="tutoriales" class="section-padding fade-in">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Tutoriales en video</h2>
+        <p>Diez videos diseñados para explicar ejercicios de límites y derivadas paso a paso.</p>
+      </div>
+      <div class="filter-controls text-center mt-2">
+        <button class="filter-btn active" data-filter="Todos">Todos</button>
+        <button class="filter-btn" data-filter="Límites al infinito">Límites al infinito</button>
+        <button class="filter-btn" data-filter="Derivadas básicas">Derivadas básicas</button>
+      </div>
+      <div id="video-grid" class="grid-3 mt-3"></div>
+    </div>
+  </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">CALCULA<span class="text-lime">+</span></div>
-            <p>Plataforma educativa creada para facilitar el aprendizaje de Cálculo I.</p>
-            <ul class="footer-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="contenido.html">Contenido</a></li>
-                <li><a href="contenido.html#tutoriales">Tutoriales</a></li>
-                <li><a href="contenido.html#recursos">Recursos</a></li>
-                <li><a href="contenido.html#faq">FAQ</a></li>
-                <li><a href="practica.html">Práctica</a></li>
-            </ul>
+  <section id="recursos" class="section-padding bg-light fade-in">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Recursos descargables</h2>
+        <p>Material de apoyo preparado para estudiar y repasar.</p>
+      </div>
+      <div class="grid-4 mt-3">
+        <div class="resource-card">
+          <div class="r-icon"></div>
+          <span class="r-cat">Límites</span>
+          <h4>Guía de límites al infinito</h4>
+          <p>Explicaciones, asíntotas y ejercicios resueltos.</p>
+          <span class="badge"></span>
+          <a href="assets/resources/limitesinfinitos.pdf" download="Guia_Limites_Al_Infinito.pdf" class="btn btn-outline mt-1 w-100">Descargar PDF</a>
         </div>
-        <div class="footer-bottom"><p>© 2026 CALCULA+ | Proyecto académico de Cálculo I.</p></div>
-    </footer>
+        <div class="resource-card">
+          <div class="r-icon"></div>
+          <span class="r-cat">+ Límites</span>
+          <h4>Clase 4 presentada en clase</h4>
+          <p>Conceptos, reglas principales y ejemplos.</p>
+          <span class="badge"></span>
+          <a href="assets/resources/limitesclase4.pdf" download="Guia_Limites_Clase_4.pdf" class="btn btn-outline mt-1 w-100">Descargar PDF</a>
+        </div>
+        <div class="resource-card">
+          <div class="r-icon"></div>
+          <span class="r-cat">Derivadas</span>
+          <h4>Resumen de derivadas basicas</h4>
+          <p>Conceptos, reglas principales y ejemplos.</p>
+          <span class="badge"></span>
+          <a href="assets/resources/derivada.pdf" download="Guia_Derivadas.pdf" class="btn btn-outline mt-1 w-100">Descargar PDF</a>
+        </div>
+        <div class="resource-card">
+          <div class="r-icon"></div>
+          <span class="r-cat">Ejercicios de derivadas</span>
+          <h4>Banco de ejercicios</h4>
+          <p>Problemas adicionales para reforzar lo aprendido.</p>
+          <span class="badge"></span>
+          <a href="assets/resources/ejerciciosderivadas.pdf" download="Ejercicios_Derivadas.pdf" class="btn btn-outline mt-1 w-100">Descargar PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <button id="backToTop" aria-label="Volver arriba">↑</button>
-    <script src="js/main.js"></script>
-    <script src="js/contenido.js"></script>
+  <section id="faq" class="section-padding fade-in">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>Preguntas frecuentes</h2>
+        <p>Respuestas a dificultades reales expresadas por estudiantes del curso.</p>
+      </div>
+      <div class="search-container text-center mt-2">
+        <input type="text" id="faq-search" placeholder="Buscar una duda: raíces, asíntotas, pendiente, derivadas..." class="search-input">
+      </div>
+      <div class="faq-list mt-3" id="faq-container">
+        <h3 class="faq-category-title">A. Límites al infinito</h3>
+        <details class="accordion faq-item"><summary>¿Cómo sé qué procedimiento utilizar en un límite al infinito?</summary><div class="accordion-content"><p>Primero identifica el tipo de expresión. Si es una fracción de polinomios, compara los grados del numerador y del denominador. Si aparecen raíces y obtienes una expresión como ∞ - ∞, normalmente conviene racionalizar. Si el resultado parece crecer sin límite, analiza el término dominante y su signo.</p></div></details>
+        <details class="accordion faq-item"><summary>¿Por qué los límites con raíces resultan más complicados?</summary><div class="accordion-content"><p>Las raíces pueden producir expresiones que no se simplifican mediante sustitución directa, especialmente formas como ∞ - ∞. En estos casos se utiliza el conjugado para racionalizar la expresión y transformarla en una forma más sencilla de evaluar.</p></div></details>
+        <details class="accordion faq-item"><summary>¿Cómo determino si el resultado es +∞ o −∞?</summary><div class="accordion-content"><p>Debes observar el signo del término dominante. Por ejemplo, si una expresión se comporta como 2x, entonces cuando x → +∞ el resultado es positivo, pero cuando x → −∞ el resultado es negativo.</p></div></details>
+        <details class="accordion faq-item"><summary>¿Qué hago cuando la sustitución directa produce una indeterminación?</summary><div class="accordion-content"><p>Una indeterminación indica que necesitas transformar la expresión. Puedes factorizar, dividir entre la potencia de mayor grado o racionalizar cuando existan raíces. Después de simplificar, vuelve a analizar el límite.</p></div></details>
+        <details class="accordion faq-item"><summary>¿Por qué una función puede tener comportamientos diferentes por la izquierda y por la derecha?</summary><div class="accordion-content"><p>Cerca de una asíntota vertical, el denominador puede cambiar de signo. Por ejemplo, en f(x) = 1/(x - 2), al acercarse a 2 por la derecha el resultado es +∞, mientras que por la izquierda es −∞.</p></div></details>
+
+        <h3 class="faq-category-title mt-3">B. Asíntotas</h3>
+        <details class="accordion faq-item"><summary>¿Cómo identifico una asíntota horizontal?</summary><div class="accordion-content"><p>Existe una asíntota horizontal cuando la función se aproxima a un valor fijo L mientras x → +∞ o x → −∞. Si el límite vale L, entonces la recta y = L es la asíntota horizontal.</p></div></details>
+        <details class="accordion faq-item"><summary>¿Cómo identifico una asíntota vertical?</summary><div class="accordion-content"><p>Existe una asíntota vertical cuando la función crece hacia +∞ o disminuye hacia −∞ al acercarse x a un valor específico. Si ocurre al acercarse a x = a, entonces x = a es una asíntota vertical.</p></div></details>
+        <details class="accordion faq-item"><summary>¿Por qué es importante interpretar gráficamente un límite?</summary><div class="accordion-content"><p>Porque el límite no solamente da un resultado numérico: también describe hacia dónde se dirige la gráfica, si se acerca a una línea horizontal o si crece sin límite cerca de una asíntota vertical.</p></div></details>
+
+        <h3 class="faq-category-title mt-3">C. Derivadas básicas</h3>
+        <details class="accordion faq-item"><summary>¿Qué significa realmente una derivada?</summary><div class="accordion-content"><p>La derivada mide cómo cambia una función en un punto específico. Geométricamente representa la pendiente de la recta tangente. Permite analizar si una función crece, decrece o presenta un punto estacionario.</p></div></details>
+        <details class="accordion faq-item"><summary>¿Cuál es la diferencia entre recta secante y recta tangente?</summary><div class="accordion-content"><p>La recta secante une dos puntos de una curva y representa un cambio promedio. La recta tangente toca la curva en un punto específico y representa el cambio instantáneo, que es justamente lo que mide la derivada.</p></div></details>
+        <details class="accordion faq-item"><summary>¿Cómo puedo encontrar la pendiente si solo tengo un punto?</summary><div class="accordion-content"><p>Para encontrar la pendiente instantánea se utiliza un punto muy cercano representado por h. Luego se hace que h se aproxime a cero. Ese procedimiento permite obtener la pendiente exacta de la recta tangente.</p></div></details>
+        <details class="accordion faq-item"><summary>¿Cómo sé qué regla de derivación utilizar?</summary><div class="accordion-content"><p>Observa la estructura de la función. Si es una potencia de x, utiliza la regla de potencia. Si contiene sumas o restas, deriva término por término. Si aparece una raíz, conviértela en exponente fraccionario. Si hay una función dentro de otra, utiliza la regla de la cadena.</p></div></details>
+        <details class="accordion faq-item"><summary>¿Cómo se deriva una función que contiene una raíz?</summary><div class="accordion-content"><p>Primero convierte la raíz en potencia fraccionaria. Por ejemplo, √x = x^(1/2). Después aplica la regla de potencia, obteniendo (1/2)x^(-1/2), que también puede escribirse como 1/(2√x).</p></div></details>
+        <details class="accordion faq-item"><summary>¿Por qué la regla de la cadena suele causar dificultad?</summary><div class="accordion-content"><p>Porque requiere identificar dos partes: una función externa y una interna. Primero se deriva la función externa conservando la interna, y después se multiplica por la derivada de la función interna.</p></div></details>
+        <details class="accordion faq-item"><summary>¿Qué sucede cuando la función no está despejada como y = f(x)?</summary><div class="accordion-content"><p>Cuando x e y aparecen mezcladas en una ecuación, puede utilizarse derivación implícita. En ese procedimiento se derivan ambos lados respecto a x y los términos con y producen un factor dy/dx. Este contenido es una ampliación del tema básico.</p></div></details>
+
+        <h3 class="faq-category-title mt-3">D. Continuidad y límites adicionales</h3>
+        <details class="accordion faq-item"><summary>¿Cuándo una función es continua?</summary><div class="accordion-content"><p>Una función es continua en un punto cuando cumple tres condiciones: está definida en ese punto, existe el límite al aproximarse a ese punto y el límite coincide con el valor de la función.</p></div></details>
+        <details class="accordion faq-item"><summary>¿Por qué los límites trigonométricos pueden ser difíciles?</summary><div class="accordion-content"><p>Porque suelen presentar indeterminaciones y requieren reconocer identidades trigonométricas o límites notables. Aunque no son el tema central de esta plataforma, forman parte importante del estudio posterior de límites.</p></div></details>
+      </div>
+      <div id="no-faq-msg" class="hidden text-center mt-2 text-sec">No se encontraron resultados para tu búsqueda.</div>
+    </div>
+  </section>
+
+  <div id="yt-modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <div class="video-container" id="iframe-container"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">Fórmula copiada</div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">CALCULA<span class="text-lime">+</span></div>
+      <p>Plataforma educativa creada para facilitar el aprendizaje de Cálculo I.</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="contenido.html">Contenido</a></li>
+        <li><a href="contenido.html#tutoriales">Tutoriales</a></li>
+        <li><a href="contenido.html#recursos">Recursos</a></li>
+        <li><a href="contenido.html#faq">FAQ</a></li>
+        <li><a href="practica.html">Práctica</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom"><p>© 2026 CALCULA+ | Proyecto académico de Cálculo I.</p></div>
+  </footer>
+
+  <button id="backToTop" aria-label="Volver arriba">↑</button>
+  <script src="js/main.js"></script>
+  <script src="js/contenido.js"></script>
 </body>
 </html>
