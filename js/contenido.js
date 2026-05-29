@@ -45,18 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. VIDEOS, NOMBRES DE ESTUDIANTES Y MINIATURAS
+    // 3. VIDEOS, NOMBRES DE ESTUDIANTES Y MINIATURAS (¡Colección Completa!)
     const videos = [
-        { id: 1, categoria: "Límites al infinito", titulo: "Límite racional con grados iguales", estudiante: "Krystel Alvarado", youtubeId: "couOuhnHjJ0", estado: "Disponible" },
-        { id: 2, categoria: "Derivadas básicas", titulo: "Regla de la potencia paso a paso", estudiante: "Krystel Alvarado", youtubeId: "HRtEM2dYosc", estado: "Disponible" },
-        { id: 3, categoria: "Límites al infinito", titulo: "Cuando el denominador domina", estudiante: "Rocio Ruano", youtubeId: "VY3FJipYg1s", estado: "Disponible" },
-        { id: 4, categoria: "Derivadas básicas", titulo: "Derivada de un polinomio", estudiante: "Rocio Ruano", youtubeId: "g0dcFjeYVyE", estado: "Disponible" },
-        { id: 5, categoria: "Derivadas básicas", titulo: "Derivada de funciones con raíz", estudiante: "Krystel Canas", youtubeId: "QY77oZ0MsUA", estado: "Disponible" },
-        { id: 6, categoria: "Límites al infinito", titulo: "Asíntotas horizontales", estudiante: "Krystel Canas", youtubeId: "FQIdZJIJp2s", estado: "Disponible" },
-        { id: 7, categoria: "Límites al infinito", titulo: "Racionalización en límites con raíces", estudiante: "Adriana Cruz", youtubeId: "lC_tiqJ97uU", estado: "Disponible" },
-        { id: 8, categoria: "Derivadas básicas", titulo: "Recta tangente y significado de la derivada", estudiante: "Adriana Cruz", youtubeId: "VBVQ8Fmr7-o", estado: "Disponible" },
-        { id: 9, categoria: "Límites al infinito", titulo: "Análisis de signo cuando x tiende a −∞", estudiante: "Genesis Galeano", youtubeId: "", estado: "Próximamente" },
-        { id: 10, categoria: "Derivadas básicas", titulo: "Introducción a la regla de la cadena", estudiante: "Genesis Galeano", youtubeId: "", estado: "Próximamente" }
+        { id: 1, categoria: "Límites al infinito", titulo: "Resolviendo ejercicios", estudiante: "Krystel Alvarado", youtubeId: "couOuhnHjJ0", estado: "Disponible" },
+        { id: 2, categoria: "Derivadas básicas", titulo: "Resolviendo ejercicios", estudiante: "Krystel Alvarado", youtubeId: "HRtEM2dYosc", estado: "Disponible" },
+        { id: 3, categoria: "Límites al infinito", titulo: "Resolviendo ejercicios", estudiante: "Rocio Ruano", youtubeId: "VY3FJipYg1s", estado: "Disponible" },
+        { id: 4, categoria: "Derivadas básicas", titulo: "Resolviendo ejercicios", estudiante: "Rocio Ruano", youtubeId: "g0dcFjeYVyE", estado: "Disponible" },
+        { id: 5, categoria: "Derivadas básicas", titulo: "Resolviendo ejercicios", estudiante: "Krystel Canas", youtubeId: "QY77oZ0MsUA", estado: "Disponible" },
+        { id: 6, categoria: "Límites al infinito", titulo: "Resolviendo ejercicios", estudiante: "Krystel Canas", youtubeId: "FQIdZJIJp2s", estado: "Disponible" },
+        { id: 7, categoria: "Límites al infinito", titulo: "Resolviendo ejercicios", estudiante: "Adriana Cruz", youtubeId: "lC_tiqJ97uU", estado: "Disponible" },
+        { id: 8, categoria: "Derivadas básicas", titulo: "Resolviendo ejercicios", estudiante: "Adriana Cruz", youtubeId: "VBVQ8Fmr7-o", estado: "Disponible" },
+        { id: 9, categoria: "Límites al infinito", titulo: "Resolviendo ejercicios", estudiante: "Genesis Galeano", youtubeId: "sX1Q-RRur-s", estado: "Disponible" },
+        { id: 10, categoria: "Derivadas básicas", titulo: "Resolviendo ejercicios", estudiante: "Genesis Galeano", youtubeId: "ZOtm4J5YtVM", estado: "Disponible" }
     ];
 
     const videoGrid = document.getElementById('video-grid');
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Eventos para abrir modal de YouTube (Ahora funciona tanto el botón largo como el de Play en la imagen)
+        // Eventos para abrir modal de YouTube
         document.querySelectorAll('.btn-yt, .play-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const id = e.target.getAttribute('data-id');

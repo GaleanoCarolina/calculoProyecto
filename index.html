@@ -108,36 +108,46 @@
                 <p>El proyecto contempla diez videos explicativos donde se resolverán ejercicios de límites al infinito y derivadas básicas.</p>
             </div>
             <div class="grid-3">
+                
                 <div class="video-card">
-                    <div class="video-thumb">
-                        <div class="play-btn">▶</div>
-                        <span class="video-badge">Próximamente</span>
+                    <div class="video-thumb" style="background-image: url('https://img.youtube.com/vi/couOuhnHjJ0/hqdefault.jpg'); background-size: cover; background-position: center;">
+                        <div class="play-btn" data-id="couOuhnHjJ0">▶</div>
+                        <span class="video-badge">Disponible</span>
                     </div>
                     <div class="video-info">
-                        <span class="video-category">Límites al infinito</span>
-                        <h4>Límite racional con grados iguales</h4>
+                        <span class="video-category">01 - Límites al infinito</span>
+                        <h4 style="margin-bottom: auto;">Resolviendo ejercicios</h4>
+                        <p class="text-sm text-purple mt-2 mb-2" style="font-weight: 600;">👨‍🎓 Estudiante: <span style="font-weight: normal; color: var(--text-main);">Krystel Alvarado</span></p>
+                        <button class="btn btn-primary btn-yt mt-1 w-100" data-id="couOuhnHjJ0">Ver tutorial</button>
                     </div>
                 </div>
+
                 <div class="video-card">
-                    <div class="video-thumb">
-                        <div class="play-btn">▶</div>
-                        <span class="video-badge">Próximamente</span>
+                    <div class="video-thumb" style="background-image: url('https://img.youtube.com/vi/lC_tiqJ97uU/hqdefault.jpg'); background-size: cover; background-position: center;">
+                        <div class="play-btn" data-id="lC_tiqJ97uU">▶</div>
+                        <span class="video-badge">Disponible</span>
                     </div>
                     <div class="video-info">
-                        <span class="video-category">Límites al infinito</span>
-                        <h4>Límites con raíces y racionalización</h4>
+                        <span class="video-category">07 - Límites al infinito</span>
+                        <h4 style="margin-bottom: auto;">Resolviendo ejercicios</h4>
+                        <p class="text-sm text-purple mt-2 mb-2" style="font-weight: 600;">👨‍🎓 Estudiante: <span style="font-weight: normal; color: var(--text-main);">Adriana Cruz</span></p>
+                        <button class="btn btn-primary btn-yt mt-1 w-100" data-id="lC_tiqJ97uU">Ver tutorial</button>
                     </div>
                 </div>
+
                 <div class="video-card">
-                    <div class="video-thumb">
-                        <div class="play-btn">▶</div>
-                        <span class="video-badge">Próximamente</span>
+                    <div class="video-thumb" style="background-image: url('https://img.youtube.com/vi/HRtEM2dYosc/hqdefault.jpg'); background-size: cover; background-position: center;">
+                        <div class="play-btn" data-id="HRtEM2dYosc">▶</div>
+                        <span class="video-badge">Disponible</span>
                     </div>
                     <div class="video-info">
-                        <span class="video-category">Derivadas básicas</span>
-                        <h4>Regla de la potencia paso a paso</h4>
+                        <span class="video-category">02 - Derivadas básicas</span>
+                        <h4 style="margin-bottom: auto;">Resolviendo ejercicios</h4>
+                        <p class="text-sm text-purple mt-2 mb-2" style="font-weight: 600;">👨‍🎓 Estudiante: <span style="font-weight: normal; color: var(--text-main);">Krystel Alvarado</span></p>
+                        <button class="btn btn-primary btn-yt mt-1 w-100" data-id="HRtEM2dYosc">Ver tutorial</button>
                     </div>
                 </div>
+
             </div>
             <div class="text-center mt-3">
                 <a href="contenido.html#tutoriales" class="btn btn-secondary">Ver todos los tutoriales</a>
@@ -185,6 +195,13 @@
         </div>
     </section>
 
+    <div id="yt-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="video-container" id="iframe-container"></div>
+        </div>
+    </div>
+
     <footer>
         <div class="container footer-content">
             <div class="footer-logo">CALCULA<span class="text-lime">+</span></div>
@@ -204,6 +221,36 @@
     </footer>
 
     <button id="backToTop" aria-label="Volver arriba">↑</button>
+    
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ytModal = document.getElementById('yt-modal');
+            const iframeContainer = document.getElementById('iframe-container');
+            const closeModal = document.querySelector('.close-modal');
+
+            // Abrir modal desde botones 'Ver tutorial' o el icono 'Play' de la miniatura
+            document.querySelectorAll('.btn-yt, .play-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const id = e.target.getAttribute('data-id');
+                    if(id) {
+                        iframeContainer.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+                        ytModal.classList.add('show');
+                    }
+                });
+            });
+
+            // Cerrar modal
+            if(ytModal) {
+                const closeMod = () => {
+                    ytModal.classList.remove('show');
+                    setTimeout(() => iframeContainer.innerHTML = '', 300);
+                };
+                closeModal.addEventListener('click', closeMod);
+                window.addEventListener('click', (e) => { if(e.target === ytModal) closeMod(); });
+                document.addEventListener('keydown', (e) => { if(e.key === "Escape" && ytModal.classList.contains('show')) closeMod(); });
+            }
+        });
+    </script>
 </body>
 </html>
